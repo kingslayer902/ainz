@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white shadow px-4 py-3 flex justify-between items-center">
+  <nav class="bg-white shadow px-4 py-3 flex justify-between items-center relative">
     <!-- Logo -->
     <div class="text-2xl font-bold text-blue-600 flex items-center gap-2">
       ❄️ <span>Nexac</span>
@@ -8,7 +8,7 @@
     <!-- Hamburger Button (Mobile) -->
     <button
       @click="isOpen = !isOpen"
-      class="lg:hidden text-gray-600 focus:outline-none"
+      class="lg:hidden text-gray-700 focus:outline-none z-20"
     >
       <svg
         v-if="!isOpen"
@@ -38,15 +38,35 @@
     <div
       :class="[
         isOpen ? 'block' : 'hidden',
-        'w-full mt-4 lg:mt-0 lg:flex lg:items-center lg:space-x-6 lg:w-auto'
+        'absolute top-full left-0 w-full bg-white shadow-md px-4 py-3 lg:static lg:shadow-none lg:flex lg:items-center lg:space-x-6 lg:w-auto'
       ]"
-      class="lg:flex space-y-2 lg:space-y-0 flex-col lg:flex-row"
+      class="transition-all duration-200 ease-in-out z-10"
     >
-      <RouterLink to="/" class="hover:text-blue-500">Home</RouterLink>
-      <RouterLink to="/about" class="hover:text-blue-500">Tentang</RouterLink>
-      <RouterLink to="/services" class="hover:text-blue-500">Layanan</RouterLink>
-      <RouterLink to="/contact" class="hover:text-blue-500">Kontak</RouterLink>
-      <RouterLink to="/login" class="hover:text-blue-500">Masuk</RouterLink>
+      <RouterLink
+        to="/"
+        class="block py-2 lg:py-0 hover:text-blue-500"
+        @click="isOpen = false"
+      >Home</RouterLink>
+      <RouterLink
+        to="/about"
+        class="block py-2 lg:py-0 hover:text-blue-500"
+        @click="isOpen = false"
+      >Tentang</RouterLink>
+      <RouterLink
+        to="/services"
+        class="block py-2 lg:py-0 hover:text-blue-500"
+        @click="isOpen = false"
+      >Layanan</RouterLink>
+      <RouterLink
+        to="/contact"
+        class="block py-2 lg:py-0 hover:text-blue-500"
+        @click="isOpen = false"
+      >Kontak</RouterLink>
+      <RouterLink
+        to="/login"
+        class="block py-2 lg:py-0 hover:text-blue-500"
+        @click="isOpen = false"
+      >Masuk</RouterLink>
     </div>
   </nav>
 </template>
