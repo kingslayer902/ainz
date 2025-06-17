@@ -21,7 +21,8 @@ const services = ref([])
 
 onMounted(async () => {
   try {
-    const res = await axios.get('http://localhost:3001/services')
+    const res = await axios.get('https://nexac-api-production.up.railway.app/services')
+
     services.value = res.data
   } catch (err) {
     console.error(err)
