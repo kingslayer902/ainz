@@ -1,0 +1,10 @@
+{
+  "services": [
+    { "id": 1, "title": "Servis AC Rutin", "description": "Menjaga performa AC tetap optimal dengan servis rutin." },
+    { "id": 2, "title": "Isi Freon", "description": "Mengisi ulang freon untuk memastikan udara tetap dingin." },
+    { "id": 3, "title": "Pemasangan AC Baru", "description": "Instalasi AC profesional untuk rumah & kantor." },
+    { "id": 4, "title": "Perbaikan AC Rusak", "description": "Solusi cepat dan tepat untuk AC bermasalah." },
+    { "id": 5, "title": "Cuci AC", "description": "Membersihkan filter dan evaporator agar udara lebih sehat." },
+    { "id": 6, "title": "Konsultasi & Survey", "description": "Diskusikan kebutuhan Anda sebelum membeli atau servis AC." }
+  ]
+}
